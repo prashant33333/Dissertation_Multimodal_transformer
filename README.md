@@ -12,9 +12,9 @@
 
 
 
-#Codebase structure
+## Repository Structure
 
-
+```bash
 project_root/
 |
 |-- README.md
@@ -43,7 +43,6 @@ project_root/
 |       `-- Model trained with Weighted Random Sampling to handle imbalance.
 |
 `-- src/
-    `-- Source notebooks organized by pipeline stage.
     |
     |-- Data_preprocessing/
     |   `-- Clean_preprocess_MELD_Data.ipynb
@@ -54,13 +53,13 @@ project_root/
     |   |   `-- Extracts acoustic representations from speech signals.
     |   |
     |   |-- extract_text_features.ipynb
-    |   |   `-- Extracts semantic embeddings from transcripts using NLP models.
+    |   |   `-- Extracts semantic embeddings using NLP models.
     |   |
     |   |-- extract_visual_features.ipynb
-    |   |   `-- Extracts facial/frame-level visual embeddings from video input.
+    |   |   `-- Extracts visual embeddings from video frames/faces.
     |   |
     |   |-- extract_labels_and_analysis.ipynb
-    |   |   `-- Loads labels and performs class imbalance distribution analysis.
+    |   |   `-- Performs class imbalance distribution analysis.
     |   |
     |   |-- only_audio_extract_features.ipynb
     |   |   `-- Audio-only feature extraction experiments.
@@ -70,11 +69,11 @@ project_root/
     |
     |-- training/
     |   |-- train.ipynb
-    |   |   `-- Baseline training using stratified batch sampling.
+    |   |   `-- Baseline training using stratified sampling.
     |   |
-    |   `-- WtRandomSampler train.ipynb
-    |       `-- Training with Weighted Random Sampling for imbalance-aware learning.
+    |   `-- WtRandomSampler_train.ipynb
+    |       `-- Training with Weighted Random Sampling for imbalance handling.
     |
     `-- inference/
         `-- inference.ipynb
-            `-- Runs evaluation and emotion prediction on unseen multimodal samples.
+            `-- Runs evaluation and emotion prediction on unseen samples.
