@@ -13,6 +13,8 @@
 
 
 #Codebase structure
+
+
 project_root/
 │
 ├── README.md
